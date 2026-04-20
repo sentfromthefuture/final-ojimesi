@@ -1,0 +1,31 @@
+.home {
+    position: relative;
+    background: url('philippe-gauthier-eaOjEz8746k-unsplash.jpg') no-repeat center center/cover;
+    height: 50vh;
+    animation: slideshow 600s infinite ease-in-out;
+}
+
+@keyframes slideshow {
+    0%,
+    100% {
+        background-image: url('philippe-gauthier-eaOjEz8746k-unsplash.jpg');
+        color: rgb(255, 255, 255);
+    }
+    33% {
+        background-image: url('thomas-lefebvre-V63oM8OPJSo-unsplash.jpg');
+        color: black;
+    }
+    66% {
+        background-image: url('snehsha-tank-RRLJN_EvFbE-unsplash.jpg');
+        color: rgb(255, 255, 255);
+    }
+    55% {
+        background-image: url('ryan-waldman-Cey6MGfJ_UU-unsplash.jpg');
+        color: rgb(255, 255, 255);
+    }
+}
+.text{
+    font-weight: 500;
+    position: absolute;
+    bottom: 20px;
+}

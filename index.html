@@ -1,0 +1,141 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Ojimesi Restoration Group</title>
+    <link rel="stylesheet" href="trees.css">
+    <link rel="stylesheet" href="nav.css">
+    <link rel="stylesheet" href="home.css">
+    <link rel="stylesheet" href="video.css">
+    <link rel="stylesheet" href="about.css">
+</head>
+<body>
+    <nav>
+        <div class="logo">
+            <p>Ojimesi Restoration Group</p>
+        </div>
+        <div>
+            <ul class="nav-links">
+                <li><a href="#home">Home</a></li>
+                <li><a href="#Trees-Available">Trees Available</a></li>
+                <li><a href="#about">About</a></li>
+                <li><a href="#Cart">Cart</a></li>
+                <li><a href="#contact">Contact</a></li>
+            </ul>
+        </div>
+    </nav>
+    <section id="home">
+        <div class="home">
+            <div class="text">
+                <h1>Welcome to Ojimesi Restoration Group</h1>
+                <p>Your trusted partner in restoration services.</p>   
+            </div>
+        </div>
+    </section>
+    <section id="about">
+        <div class="about">
+            <video src="37444-414024657_medium.mp4" autoplay muted loop></video>
+            <div id="videoLoader" style="margin: 1rem 0; padding: 0.75rem; background: #f0f0f0; color: #333; border-radius: 4px;">
+                Loading video...
+            </div>
+            <script>
+                const aboutVideo = document.querySelector('#about video');
+                const loader = document.getElementById('videoLoader');
+
+                if (aboutVideo) {
+                    aboutVideo.addEventListener('loadeddata', () => {
+                        loader.style.display = 'none';
+                    });
+                    aboutVideo.addEventListener('error', () => {
+                        loader.textContent = 'Video failed to load.';
+                    });
+                }
+            </script>
+            <div class="about-text"> 
+                <div class="text-box1"> 
+                    <h2>About Us</h2>
+                    <p>Ojimesi Restoration Group is dedicated to providing top-notch trees for residential and commercial properties. With years of experience, we specialize in water damage restoration, fire damage restoration, mold remediation, and more.</p>
+                </div>  
+                <div class="text-box2">
+                    <h3>Our Services</h3>
+                    <p>We offer a wide range of restoration services to meet all your needs.</p>
+                </div>
+                <div class="text-box3">
+                    <h3>Why Choose Us?</h3>
+                    <p>With our expertise and commitment to quality, we ensure your property is restored to its best condition.</p>
+                </div>
+            </div>
+        </div>
+    </section>
+    <section id="Trees-Available">
+        <h2>Trees Available</h2>
+        <p>Check out our selection of trees available for restoration and landscaping projects.</p>
+        <div class="tree-container">
+            <div class="exotic-trees">
+                <details>
+                    <summary>Exotic Trees</summary>
+                    <p>Discover our collection of exotic trees perfect for enhancing your property's beauty.</p>
+                </details>
+            </div>
+            <div class="native-trees">
+                <details>
+                    <summary>Native Trees</summary>
+                    <p>Explore our selection of native trees that are well-adapted to your local environment.</p>
+                </details>
+            </div>
+            <div class="fruit-trees">
+                <details>
+                    <summary>Fruit Trees</summary>
+                    <p>Choose from a variety of fruit trees to add both beauty and functionality to your landscape.</p>
+                </details>
+            </div>
+            <div class="shade-trees">
+                <details>
+                    <summary>Shade Trees</summary>
+                    <p>Find the perfect shade trees to provide comfort and enhance the aesthetics of your outdoor space.</p>
+                </details>
+            </div>      
+            <div class="ornamental-trees">
+            <details>
+                <summary>Ornamental Trees</summary>     
+                <p>Browse our selection of ornamental trees to add a touch of elegance to your garden.</p>
+            </details>
+            </div>
+            <div class="coniferous-trees">
+                <details>
+                    <summary>Coniferous Trees</summary>
+                    <p>Discover our variety of coniferous trees that provide year-round greenery and structure to your landscape.</p>
+                </details>  
+            </div>
+            <div class="evergreen-trees">
+                <details>
+                    <summary>Evergreen Trees</summary>
+                    <p>Discover our variety of evergreen trees that provide year-round beauty and privacy.</p>
+                </details>
+            </div>
+            <div class="flowering-trees">
+                <details>
+                    <summary>Flowering Trees</summary>
+                    <p>Explore our collection of flowering trees that will add vibrant colors to your landscape.</p>
+                </details>
+            </div>
+        </div>
+    </section>
+    <cart id="Cart">
+        <h2>Cart</h2>
+        <p>Your selected items will appear here.</p>
+    </cart>
+    <section id="contact">
+        <h2>Contact Us</h2>
+        <p>Have questions or need our services? Contact us at:</p>
+        <ul>
+            <li>Email: info@ojimesirestoration.com</li>
+            <li>Phone: (555) 123-4567</li>
+        </ul>
+    </section>
+    <footer>
+        <p>&copy; 2024 Ojimesi Restoration Group. All rights reserved.</p>  
+    </footer>
+</body>
+</html>

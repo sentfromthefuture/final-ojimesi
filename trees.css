@@ -1,0 +1,30 @@
+.tree-container{
+    display: grid;
+    grid-template-columns: repeat(auto-fit, 300px);
+    gap: 5px;
+    justify-content: center;
+}
+.exotic-trees{
+    border: 5px solid black;
+}
+.native-trees{
+    border: 5px solid green;
+}
+.fruit-trees{
+    border: 5px solid red;
+}
+.shade-trees{
+    border: 5px solid blue;
+}
+.ornamental-trees{
+    border: 5px solid yellow;
+}
+.coniferous-trees{
+    border: 5px solid purple;
+}
+.evergreen-trees{
+    border: 5px solid orange;
+}
+.flowering-trees{
+    border: 5px solid pink;
+}
