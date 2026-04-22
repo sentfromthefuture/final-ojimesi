@@ -1,97 +1,42 @@
-/* CONTACT SECTION */
-#contact{
-    max-width: 900px;
-    margin: 60px auto;
-    padding: 45px 35px;
-
-    /* Glossy green glass look */
-    background: linear-gradient(
-        135deg,
-        rgba(34,139,34,0.30),
-        rgba(144,238,144,0.15)
-    );
-
-    backdrop-filter: blur(18px);
-    -webkit-backdrop-filter: blur(18px);
-
-    border: 1px solid rgba(255,255,255,0.25);
-    border-radius: 25px;
-
-    box-shadow:
-        0 8px 32px rgba(0,100,0,0.25),
-        inset 0 1px 2px rgba(255,255,255,0.4),
-        inset 0 -2px 8px rgba(0,60,0,0.2);
-
-    color: #f5fff5;
-    position: relative;
-    overflow: hidden;
+#contact {
+  padding: 2rem 1.5rem;
+  background: var(--color-background-primary); /* or just white */
 }
-
-/* Glossy shine overlay */
-#contact::before{
-    content: "";
-    position: absolute;
-    top: -40%;
-    left: -20%;
-    width: 140%;
-    height: 60%;
-    background: linear-gradient(
-        to bottom,
-        rgba(255,255,255,0.35),
-        rgba(255,255,255,0.05)
-    );
-    transform: rotate(-6deg);
+#contact h2 {
+  font-size: 18px;
+  font-weight: 500;
+  color: #27500a;
+  margin-bottom: .4rem;
 }
-
-#contact h2{
-    font-size: 2.2rem;
-    color: #d9ffd9;
-    text-align: center;
-    margin-bottom: 20px;
-    text-shadow: 0 2px 10px rgba(0,0,0,0.2);
+#contact p {
+  font-size: 14px;
+  color: #5f5e5a;
+  margin-bottom: 1rem;
 }
-
-#contact p{
-    font-size: 1.1rem;
-    text-align: center;
-    margin-bottom: 25px;
+#contact ul {
+  list-style: none;
+  padding: 0;
+  background: #eaf3de;
+  border: 0.5px solid #97c459;
+  border-radius: 12px;
+  padding: 1rem 1.25rem;
+  display: flex;
+  flex-direction: column;
+  gap: .6rem;
+  max-width: 360px;
 }
-
-#contact ul{
-    list-style: none;
-    padding: 0;
+#contact ul li {
+  font-size: 13px;
+  color: #27500a;
+  font-weight: 500;
 }
-
-#contact li{
-    background: rgba(255,255,255,0.08);
-    margin: 15px 0;
-    padding: 16px 20px;
-    border-radius: 14px;
-    box-shadow: inset 0 1px 2px rgba(255,255,255,0.15);
+footer {
+  padding: .75rem 1.5rem;
+  background: #27500a;
+  border-radius: 0 0 12px 12px;
 }
-
-/* FOOTER */
-footer{
-    margin-top: 50px;
-    padding: 25px;
-
-    background: linear-gradient(
-        135deg,
-        rgba(0,80,0,0.85),
-        rgba(34,139,34,0.75)
-    );
-
-    backdrop-filter: blur(15px);
-    -webkit-backdrop-filter: blur(15px);
-
-    border-top: 1px solid rgba(255,255,255,0.2);
-
-    box-shadow:
-        0 -5px 20px rgba(0,100,0,0.25),
-        inset 0 1px 1px rgba(255,255,255,0.2);
-
-    text-align: center;
-    color: #e8ffe8;
-    font-size: 1rem;
-    letter-spacing: .5px;
+footer p {
+  font-size: 12px;
+  color: #9fe1cb;
+  text-align: center;
 }
