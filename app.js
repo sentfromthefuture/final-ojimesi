@@ -49,7 +49,7 @@ function displayProducts(products) {
 
     div.innerHTML = `
       <div class ="card">
-        <img src="${product.image_url}" width="150" />
+        <img src="${product.image_url}" loading="lazy" width="150" />
         <h3>${product.name}</h3>
         <p>K${product.price}</p>
         <button onclick='addToCart(${JSON.stringify(product)})'>
@@ -73,7 +73,7 @@ function renderExoticTrees(products) {
     .map(
       (p) => `
         <div class="card">
-          <img src="${p.image_url}" />
+          <img src="${p.image_url}" loading="lazy" />
           <h4>${p.name}</h4>
           <p>K${p.price}</p>
           <button onclick='addToCart(${JSON.stringify(p)})'>
@@ -96,7 +96,7 @@ function renderFruit_trees(products) {
     .map(
       (p) => `
         <div class="card">
-          <img src="${p.image_url}" />
+          <img src="${p.image_url}" loading="lazy" />
           <h4>${p.name}</h4>
           <p>K${p.price}</p>
           <button onclick='addToCart(${JSON.stringify(p)})'>
@@ -119,7 +119,7 @@ function renderShade_trees(products) {
     .map(
       (p) => `
         <div class="card">
-          <img src="${p.image_url}" />
+          <img src="${p.image_url}" loading="lazy" />
           <h4>${p.name}</h4>
           <p>K${p.price}</p>
           <button onclick='addToCart(${JSON.stringify(p)})'>
@@ -141,7 +141,7 @@ function renderNative_trees(products) {
     .map(
       (p) => `
         <div class="card">
-          <img src="${p.image_url}" />
+          <img src="${p.image_url}" loading="lazy" />
           <h4>${p.name}</h4>
           <p>K${p.price}</p>
           <button onclick='addToCart(${JSON.stringify(p)})'>
@@ -163,7 +163,7 @@ function renderConiferous_trees(products) {
     .map(
       (p) => `
         <div class="card">
-          <img src="${p.image_url}" />
+          <img src="${p.image_url}" loading="lazy" />
           <h4>${p.name}</h4>
           <p>K${p.price}</p>
           <button onclick='addToCart(${JSON.stringify(p)})'>
@@ -185,7 +185,7 @@ function renderOrnamental_trees(products) {
     .map(
       (p) => `
         <div class="card">
-          <img src="${p.image_url}" />
+          <img src="${p.image_url}" loading="lazy" />
           <h4>${p.name}</h4>
           <p>K${p.price}</p>
           <button onclick='addToCart(${JSON.stringify(p)})'>
@@ -207,7 +207,7 @@ function renderEvergreen_trees(products) {
     .map(
       (p) => `
         <div class="card">
-          <img src="${p.image_url}" />
+          <img src="${p.image_url}" loading="lazy" />
           <h4>${p.name}</h4>
           <p>K${p.price}</p>
           <button onclick='addToCart(${JSON.stringify(p)})'>
@@ -229,7 +229,7 @@ function renderFlowering_trees(products) {
     .map(
       (p) => `
         <div class="card">
-          <img src="${p.image_url}" />
+          <img src="${p.image_url}" loading="lazy" />
           <h4>${p.name}</h4>
           <p>K${p.price}</p>
           <button onclick='addToCart(${JSON.stringify(p)})'>
