@@ -1,8 +1,40 @@
+.trees-available{
+    background-color: #468432;
+    padding: 20px;
+}
+.trees-available h2{
+    font-weight: 700;
+    font-family: 'Arial', sans-serif;
+    font-style: italic;
+    color: #fff;
+}
+.paragraph p{
+    font-size: 18px;
+    color: #131313;
+    margin-bottom: 20px;
+    border: 2px solid #ffffff;
+    background-color: rgba(255, 255, 255, 0.2);
+    border-radius: 2px;
+    font-style: oblique;
+}
+.view-all p{
+    font-size: 20px;
+    color: #ffffff;
+    font-weight: 700;
+    font-family: 'Arial', sans-serif;
+    margin-bottom: 20px;
+}
+.view-all p:hover{
+    color: #000000;
+    cursor: pointer;
+    text-decoration: underline;
+}
 .tree-container{
     display: grid;
     grid-template-columns: repeat(auto-fit, 300px);
     gap: 5px;
     justify-content: center;
+    background-color: #9AD872;
 }
 .exotic-trees{
     border: 5px solid black;
@@ -27,4 +59,10 @@
 }
 .flowering-trees{
     border: 5px solid pink;
+}
+.tree-layout{
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+    gap:20px;
+    margin: 20px;
 }

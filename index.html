@@ -9,13 +9,19 @@
     <link rel="stylesheet" href="home.css">
     <link rel="stylesheet" href="video.css">
     <link rel="stylesheet" href="about.css">
+    <link rel="stylesheet" href="cards.css">
 </head>
 <body>
     <nav>
         <div class="logo">
             <p>Ojimesi Restoration Group</p>
         </div>
-        <div>
+        <button class="nav-toggle" type="button" aria-label="Toggle navigation" aria-expanded="false" aria-controls="nav-menu">
+            <span></span>
+            <span></span>
+            <span></span>
+        </button>
+        <div class="nav-menu" id="nav-menu">
             <ul class="nav-links">
                 <li><a href="#home">Home</a></li>
                 <li><a href="#Trees-Available">Trees Available</a></li>
@@ -33,6 +39,112 @@
             </div>
         </div>
     </section>
+    <section id="Trees-Available" class="trees-available">
+        
+        <h2>Trees Available </h2>
+        <details>
+            <summary>
+                <div class="view-all">
+                    <p>View all trees</p>
+                </div>
+            </summary>
+            <div class="paragraph">
+                <p>At Ojimesi Restoration Group, we offer a wide variety of trees to suit your landscaping and restoration needs. Whether you're looking for native species to support local ecosystems or exotic varieties to add unique beauty to your property, we have something for everyone. Our selection includes fruit trees, shade trees, ornamental trees, coniferous trees, evergreen trees, flowering trees, and more. Each tree is carefully selected for quality and health, ensuring that you receive the best possible plants for your project.
+                </p>
+            </div>
+            <div class ="all-trees">
+                <div id="products" class="tree-layout"></div>
+            </div>
+        </details>
+        
+        <p>Check out our selection of trees available for restoration and landscaping projects.</p>
+        <div class="tree-container">
+            <div class="exotic-trees">
+                <details>
+                    <summary>Exotic Trees</summary>
+                    <p>Discover our collection...</p>
+
+                    <!-- PRODUCTS GO HERE -->
+                    <div id="exotic-container"></div>
+
+                </details>
+            </div>
+            <div class="native-trees">
+                <details>
+                    <summary>Native Trees</summary>
+                    <p>Discover our collection...</p>
+
+                    <!-- PRODUCTS GO HERE -->
+                    <div id="native-container"></div>
+
+                </details>
+            </div>
+            <div class="fruit-trees">
+                <details>
+                    <summary>Fruit Trees</summary>
+                    <p>Discover our collection...</p>
+
+                    <!-- PRODUCTS GO HERE -->
+                    <div id="Fruit_trees-container"></div>
+
+                </details>
+            </div>
+            <div class="shade-trees">
+                <details>
+                    <summary>Shade Trees</summary>
+                    <p>Discover our collection...</p>
+
+                    <!-- PRODUCTS GO HERE -->
+                    <div id="shade_trees-container"></div>
+
+                </details>
+            </div>      
+            <div class="ornamental-trees">
+            <details>
+                    <summary>Ornamental Trees</summary>
+                    <p>Discover our collection...</p>
+
+                    <!-- PRODUCTS GO HERE -->
+                    <div id="ornamental_trees-container"></div>
+
+                </details>
+            </div>
+            <div class="coniferous-trees">
+                <details>
+                    <summary>Coniferous Trees</summary>
+                    <p>Discover our collection...</p>
+
+                    <!-- PRODUCTS GO HERE -->
+                    <div id="coniferous_trees-container"></div>
+
+                </details>  
+            </div>
+            <div class="evergreen-trees">
+                <details>
+                    <summary>Evergreen Trees</summary>
+                    <p>Discover our collection...</p>
+
+                    <!-- PRODUCTS GO HERE -->
+                    <div id="evergreen_trees-container"></div>
+
+                </details>  
+            </div>
+            <div class="flowering-trees">
+                <details>
+                    <summary>Flowering Trees</summary>
+                    <p>Discover our collection...</p>
+
+                    <!-- PRODUCTS GO HERE -->
+                    <div id="flowering_trees-container"></div>
+
+                </details> 
+            </div>
+        </div>
+    </section>
+    <cart id="Cart">
+        <h2>Cart</h2>
+        <p>Your selected items will appear here.</p>
+    </cart>
     <section id="about">
         <div class="about">
             <video src="37444-414024657_medium.mp4" autoplay muted loop></video>
@@ -55,7 +167,7 @@
             <div class="about-text"> 
                 <div class="text-box1"> 
                     <h2>About Us</h2>
-                    <p>Ojimesi Restoration Group is dedicated to providing top-notch trees for residential and commercial properties. With years of experience, we specialize in water damage restoration, fire damage restoration, mold remediation, and more.</p>
+                    <p>Ojimesi Restoration Group is dedicated to providing top-notch trees for residential and commercial properties.</p>
                 </div>  
                 <div class="text-box2">
                     <h3>Our Services</h3>
@@ -68,64 +180,6 @@
             </div>
         </div>
     </section>
-    <section id="Trees-Available">
-        <h2>Trees Available</h2>
-        <p>Check out our selection of trees available for restoration and landscaping projects.</p>
-        <div class="tree-container">
-            <div class="exotic-trees">
-                <details>
-                    <summary>Exotic Trees</summary>
-                    <p>Discover our collection of exotic trees perfect for enhancing your property's beauty.</p>
-                </details>
-            </div>
-            <div class="native-trees">
-                <details>
-                    <summary>Native Trees</summary>
-                    <p>Explore our selection of native trees that are well-adapted to your local environment.</p>
-                </details>
-            </div>
-            <div class="fruit-trees">
-                <details>
-                    <summary>Fruit Trees</summary>
-                    <p>Choose from a variety of fruit trees to add both beauty and functionality to your landscape.</p>
-                </details>
-            </div>
-            <div class="shade-trees">
-                <details>
-                    <summary>Shade Trees</summary>
-                    <p>Find the perfect shade trees to provide comfort and enhance the aesthetics of your outdoor space.</p>
-                </details>
-            </div>      
-            <div class="ornamental-trees">
-            <details>
-                <summary>Ornamental Trees</summary>     
-                <p>Browse our selection of ornamental trees to add a touch of elegance to your garden.</p>
-            </details>
-            </div>
-            <div class="coniferous-trees">
-                <details>
-                    <summary>Coniferous Trees</summary>
-                    <p>Discover our variety of coniferous trees that provide year-round greenery and structure to your landscape.</p>
-                </details>  
-            </div>
-            <div class="evergreen-trees">
-                <details>
-                    <summary>Evergreen Trees</summary>
-                    <p>Discover our variety of evergreen trees that provide year-round beauty and privacy.</p>
-                </details>
-            </div>
-            <div class="flowering-trees">
-                <details>
-                    <summary>Flowering Trees</summary>
-                    <p>Explore our collection of flowering trees that will add vibrant colors to your landscape.</p>
-                </details>
-            </div>
-        </div>
-    </section>
-    <cart id="Cart">
-        <h2>Cart</h2>
-        <p>Your selected items will appear here.</p>
-    </cart>
     <section id="contact">
         <h2>Contact Us</h2>
         <p>Have questions or need our services? Contact us at:</p>
@@ -137,5 +191,27 @@
     <footer>
         <p>&copy; 2024 Ojimesi Restoration Group. All rights reserved.</p>  
     </footer>
+    <script>
+        const navToggle = document.querySelector('.nav-toggle');
+        const navMenu = document.querySelector('.nav-menu');
+        const navLinks = document.querySelectorAll('.nav-links a');
+
+        if (navToggle && navMenu) {
+            navToggle.addEventListener('click', () => {
+                const isOpen = navMenu.classList.toggle('open');
+                navToggle.classList.toggle('open', isOpen);
+                navToggle.setAttribute('aria-expanded', String(isOpen));
+            });
+
+            navLinks.forEach((link) => {
+                link.addEventListener('click', () => {
+                    navMenu.classList.remove('open');
+                    navToggle.classList.remove('open');
+                    navToggle.setAttribute('aria-expanded', 'false');
+                });
+            });
+        }
+    </script>
+    <script src="app.js"></script>
 </body>
 </html>
