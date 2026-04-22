@@ -37,28 +37,28 @@
     background-color: #9AD872;
 }
 .exotic-trees{
-    border: 5px solid black;
+    border: 2px solid black;
 }
 .native-trees{
-    border: 5px solid green;
+    border: 2px solid green;
 }
 .fruit-trees{
-    border: 5px solid red;
+    border: 2px solid red;
 }
 .shade-trees{
-    border: 5px solid blue;
+    border: 02px solid grey;
 }
 .ornamental-trees{
-    border: 5px solid yellow;
+    border: 2px solid yellow;
 }
 .coniferous-trees{
-    border: 5px solid purple;
+    border: 2px solid brown;
 }
 .evergreen-trees{
-    border: 5px solid orange;
+    border: 2px solid dark green;
 }
 .flowering-trees{
-    border: 5px solid pink;
+    border: 2px solid pink;
 }
 .tree-layout{
     display: grid;
