@@ -98,7 +98,41 @@ const Cart = (() => {
     cartList?.addEventListener('click', handleCartClick);
 
     document.querySelector('.cart-checkout')?.addEventListener('click', () => {
-      alert('Checkout coming soon!');
+      document.querySelector('.cart-checkout')?.addEventListener('click', async () => {
+        if (items.length === 0) return alert('Your cart is empty!');
+
+        const contact = prompt('Enter your phone number to place order:');
+        if (!contact) return;
+
+        const payload = {
+            contact,
+            items: items.map(i => ({ id: i.id, qty: i.qty })) // only IDs, no prices
+        };
+
+        try {
+            const res = await fetch('https://wbmcbtgmnolubmmximhe.supabase.co/functions/v1/create-order', {
+            method: 'POST',
+            headers: { 
+                'Content-Type': 'application/json',
+                'Authorization': `Bearer sb_publishable_FLQYoCXqT_s9cYscvty_2A_2nd0c5I4`
+            },
+            body: JSON.stringify(payload)
+            });
+
+            const data = await res.json();
+
+            if (data.success) {
+            alert(`✅ Order placed! Total: K${data.order.total}`);
+            items = [];
+            save();
+            render();
+            } else {
+            alert(`❌ Order failed: ${data.error}`);
+            }
+        } catch (err) {
+            alert('Something went wrong. Please try again.');
+        }
+        });
     });
 
     render(); // render on page load (restores from localStorage)
