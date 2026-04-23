@@ -108,3 +108,4 @@ const Cart = (() => {
 })();
 
 document.addEventListener('DOMContentLoaded', () => Cart.init());
+updateBadge();
