@@ -240,5 +240,22 @@ function renderFlowering_trees(products) {
     )
     .join("");
 }
+function addToCart(product) {
+  Cart.addItem(product.id, product.name, product.price, product.image_url);
+}
+function cartAlert(action, name) {
+  const msg = action === 'add' ? `✅ ${name} added to cart!` : `🗑️ ${name} removed from cart.`;
+  const alert = document.createElement('div');
+  alert.textContent = msg;
+  alert.style.cssText = `
+    position:fixed; bottom:20px; right:20px; z-index:9999;
+    background:${action === 'add' ? '#2d6a4f' : '#9b2226'};
+    color:#fff; padding:12px 20px; border-radius:8px;
+    font-size:14px; box-shadow:0 4px 12px rgba(0,0,0,0.2);
+    transition: opacity 0.4s ease;
+  `;
+  document.body.appendChild(alert);
+  setTimeout(() => { alert.style.opacity = '0'; }, 2000);
+  setTimeout(() => { alert.remove(); }, 2400);
+}
 loadProducts();
-renderShade_trees(products);
