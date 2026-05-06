@@ -409,23 +409,23 @@
 
   // ── Render ───────────────────────────────────────
   function renderOrders() {
-    const list = document.getElementById('orders-list');
-    const filtered = currentFilter === 'all'
-      ? allOrders
-      : allOrders.filter(o => o.status === currentFilter);
+  const list = document.getElementById('orders-list');
+  const filtered = currentFilter === 'all'
+    ? allOrders
+    : allOrders.filter(o => (o.status || 'pending') === currentFilter);  // ← null treated as pending
 
-    document.getElementById('order-count').textContent =
-      `${filtered.length} order${filtered.length !== 1 ? 's' : ''}`;
+  document.getElementById('order-count').textContent =
+    `${filtered.length} order${filtered.length !== 1 ? 's' : ''}`;
 
-    if (filtered.length === 0) {
-      list.innerHTML = `<div class="state-msg"><div class="icon">🌱</div>No ${currentFilter === 'all' ? '' : currentFilter} orders yet.</div>`;
-      return;
-    }
-
-    list.innerHTML = '';
-    filtered.forEach(order => list.appendChild(buildCard(order)));
-    updateStats();
+  if (filtered.length === 0) {
+    list.innerHTML = `<div class="state-msg"><div class="icon">🌱</div>No ${currentFilter === 'all' ? '' : currentFilter} orders yet.</div>`;
+    return;
   }
+
+  list.innerHTML = '';
+  filtered.forEach(order => list.appendChild(buildCard(order)));
+  updateStats();
+}
 
   function buildCard(order, isNew = false) {
     const items = Array.isArray(order.items) ? order.items : [];
@@ -488,18 +488,17 @@
     return card;
   }
 
-  function updateStats() {
-    const total   = allOrders.length;
-    const pending = allOrders.filter(o => (o.status || 'pending') === 'pending').length;
-    const revenue = allOrders
-      .filter(o => o.status === 'fulfilled')
-      .reduce((s, o) => s + Number(o.total), 0);
+function updateStats() {
+  const total   = allOrders.length;
+  const pending = allOrders.filter(o => !o.status || o.status === 'pending').length;  // ← null = pending
+  const revenue = allOrders
+    .filter(o => o.status === 'fulfilled')
+    .reduce((s, o) => s + Number(o.total), 0);
 
-    document.getElementById('stat-total').textContent   = total;
-    document.getElementById('stat-pending').textContent = pending;
-    document.getElementById('stat-revenue').textContent = `K${revenue.toFixed(2)}`;
-  }
-
+  document.getElementById('stat-total').textContent   = total;
+  document.getElementById('stat-pending').textContent = pending;
+  document.getElementById('stat-revenue').textContent = `K${revenue.toFixed(2)}`;
+}
   // ── Actions ──────────────────────────────────────
   async function fulfillOrder(id) {
     const btn = document.querySelector(`.btn-fulfill[data-id="${id}"]`);
