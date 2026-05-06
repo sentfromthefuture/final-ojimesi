@@ -114,7 +114,7 @@ const Cart = (() => {
             method: 'POST',
             headers: { 
                 'Content-Type': 'application/json',
-                'Authorization': `Bearer sb_publishable_FLQYoCXqT_s9cYscvty_2A_2nd0c5I4`
+                'Authorization': `Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpc3MiOiJzdXBhYmFzZSIsInJlZiI6IndibWNidGdtbm9sdWJtbXhpbWhlIiwicm9sZSI6ImFub24iLCJpYXQiOjE3NzY3ODA2NjEsImV4cCI6MjA5MjM1NjY2MX0.AZ1dfatnaouNww81-uII7ZZZWMqtwGYGaAGbuo87wfc`
             },
             body: JSON.stringify(payload)
             });
