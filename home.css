@@ -29,3 +29,27 @@
     position: absolute;
     bottom: 20px;
 }
+.exotic-trees:hover{
+    cursor: pointer;
+}
+.native-trees:hover{
+    cursor: pointer;
+}
+.fruit-trees:hover{
+    cursor: pointer;
+}
+.shade-trees:hover{
+    cursor: pointer;
+}
+.ornamental-trees:hover{
+    cursor: pointer;
+}
+.coniferous-trees:hover{
+    cursor: pointer;
+}
+.evergreen-trees:hover{
+    cursor: pointer;
+}
+.flowering-trees:hover{
+    cursor: pointer;
+}
